@@ -1,0 +1,76 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://screens/PlayScreen.gd" type="Script" id=1]
+[ext_resource path="res://pokemon backgound.tscn" type="PackedScene" id=2]
+[ext_resource path="res://fonts/Title.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Balloon Controller.gd" type="Script" id=4]
+[ext_resource path="res://balloons/Red_Balloon.tscn" type="PackedScene" id=5]
+[ext_resource path="res://balloons/Blue_Balloon.tscn" type="PackedScene" id=6]
+[ext_resource path="res://balloons/Green_Balloon.tscn" type="PackedScene" id=7]
+[ext_resource path="res://balloons/Black_Balloon.tscn" type="PackedScene" id=8]
+[ext_resource path="res://balloons/Explosion.tscn" type="PackedScene" id=9]
+
+
+[node name="PlayScreen" type="Control"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 40.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+script = ExtResource( 1 )
+
+[node name="pokemon backgound" parent="." index="0" instance=ExtResource( 2 )]
+
+[node name="ExitButton" type="Button" parent="." index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 970.0
+margin_right = 1016.0
+margin_bottom = 73.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 3 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "X"
+flat = false
+align = 1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="Balloon Controller" type="Node2D" parent="." index="2"]
+
+script = ExtResource( 4 )
+numScenes = 4
+redBalloon = ExtResource( 5 )
+blueBalloon = ExtResource( 6 )
+greenBalloon = ExtResource( 7 )
+blackBalloon = ExtResource( 8 )
+explosion = ExtResource( 9 )
+marginLeft = 200
+marginRight = 200
+marginTop = 200
+marginBottom = 200
+maxScale = 0.5
+minScale = 0.1
+
+[connection signal="pressed" from="ExitButton" to="." method="_on_Button_pressed"]
+
+
