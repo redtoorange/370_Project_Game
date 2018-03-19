@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://screens/PlayScreen.gd" type="Script" id=1]
 [ext_resource path="res://pokemon backgound.tscn" type="PackedScene" id=2]
@@ -8,10 +8,10 @@
 [ext_resource path="res://balloons/Blue_Balloon.tscn" type="PackedScene" id=6]
 [ext_resource path="res://balloons/Green_Balloon.tscn" type="PackedScene" id=7]
 [ext_resource path="res://balloons/Black_Balloon.tscn" type="PackedScene" id=8]
-[ext_resource path="res://balloons/Explosion.tscn" type="PackedScene" id=9]
+[ext_resource path="res://balloons/AnimatedText.tscn" type="PackedScene" id=9]
+[ext_resource path="res://balloons/Explosion2.tscn" type="PackedScene" id=10]
 
-
-[node name="PlayScreen" type="Control"]
+[node name="PlayScreen" type="Control" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -63,7 +63,8 @@ redBalloon = ExtResource( 5 )
 blueBalloon = ExtResource( 6 )
 greenBalloon = ExtResource( 7 )
 blackBalloon = ExtResource( 8 )
-explosion = ExtResource( 9 )
+textScene = ExtResource( 9 )
+explosion = ExtResource( 10 )
 marginLeft = 200
 marginRight = 200
 marginTop = 200

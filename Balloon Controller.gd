@@ -7,6 +7,8 @@ export(PackedScene) var blueBalloon
 export(PackedScene) var greenBalloon
 export(PackedScene) var blackBalloon
 
+export(PackedScene) var textScene
+
 export(PackedScene) var explosion
 
 export var marginLeft = 10
@@ -48,18 +50,25 @@ func mouseClicked(clickPosition):
 	
 	print("Distance: ", distance, " pixels")
 	print("Time: ", time, " seconds")
+	
+	var t = textScene.instance()
+	t.position = current.position
+	add_child(t)
+	
 	if currentRect.has_point( clickPosition ):
-		print("Hit!")
+		t.play("Hit!")
+		var e = explosion.instance()
+		add_child(e)
+		e.position = current.position
+		e.scale = current.get_node("Balloon Sprite").scale * 2
+		e.play()
 	else:
-		print("Miss!")
+		t.play("Miss!")
 	
 	print(" ")
 	
 	targetVisible = false
 	time = 0.0
-	var e = explosion.instance()
-	e.position = current.position
-	add_child(e)
 	current.queue_free()
 	makeBalloon()
 

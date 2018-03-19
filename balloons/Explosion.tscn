@@ -10,7 +10,7 @@ vframes = 8
 hframes = 8
 script = ExtResource( 2 )
 _sections_unfolded = [ "Animation", "Region", "Transform" ]
-frames = 63
+frames = 32
 duration = 0.5
 
 

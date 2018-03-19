@@ -7,7 +7,7 @@
 [ext_resource path="res://Exit.gd" type="Script" id=5]
 [ext_resource path="res://screens/DB_Controller.gd" type="Script" id=6]
 
-[node name="Start Screen" type="Control" index="0"]
+[node name="Start Screen" type="Control"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -127,34 +127,16 @@ flat = false
 align = 1
 script = ExtResource( 5 )
 
-[node name="WindowDialog" type="WindowDialog" parent="." index="5"]
+[node name="DB_Controller" type="Panel" parent="." index="5"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 6.0
-margin_top = 10.0
-margin_right = 216.0
-margin_bottom = 140.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-popup_exclusive = false
-window_title = ""
-resizable = false
-
-[node name="DB_Controller" type="Panel" parent="WindowDialog" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 204.0
-margin_bottom = 126.0
+margin_left = 21.0
+margin_top = 16.0
+margin_right = 225.0
+margin_bottom = 142.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -163,7 +145,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 script = ExtResource( 6 )
 
-[node name="ID_Text" type="TextEdit" parent="WindowDialog/DB_Controller" index="0"]
+[node name="ID_Text" type="TextEdit" parent="DB_Controller" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -197,7 +179,7 @@ caret_blink = false
 caret_blink_speed = 0.65
 caret_moving_by_right_click = true
 
-[node name="Time_Text" type="TextEdit" parent="WindowDialog/DB_Controller" index="1"]
+[node name="Time_Text" type="TextEdit" parent="DB_Controller" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -231,7 +213,7 @@ caret_blink = false
 caret_blink_speed = 0.65
 caret_moving_by_right_click = true
 
-[node name="Dist_Text" type="TextEdit" parent="WindowDialog/DB_Controller" index="2"]
+[node name="Dist_Text" type="TextEdit" parent="DB_Controller" index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -265,7 +247,7 @@ caret_blink = false
 caret_blink_speed = 0.65
 caret_moving_by_right_click = true
 
-[node name="upload" type="Button" parent="WindowDialog/DB_Controller" index="3"]
+[node name="upload" type="Button" parent="DB_Controller" index="3"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -290,7 +272,7 @@ text = "Upload"
 flat = false
 align = 1
 
-[node name="Time_Label" type="Label" parent="WindowDialog/DB_Controller" index="4"]
+[node name="Time_Label" type="Label" parent="DB_Controller" index="4"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -313,7 +295,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="ID_Label" type="Label" parent="WindowDialog/DB_Controller" index="5"]
+[node name="ID_Label" type="Label" parent="DB_Controller" index="5"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -336,7 +318,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Dist_Label" type="Label" parent="WindowDialog/DB_Controller" index="6"]
+[node name="Dist_Label" type="Label" parent="DB_Controller" index="6"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -365,6 +347,6 @@ max_lines_visible = -1
 
 [connection signal="pressed" from="Exit" to="Exit" method="_on_Exit_pressed"]
 
-[connection signal="pressed" from="WindowDialog/DB_Controller/upload" to="WindowDialog/DB_Controller" method="_on_upload_pressed"]
+[connection signal="pressed" from="DB_Controller/upload" to="DB_Controller" method="_on_upload_pressed"]
 
 
