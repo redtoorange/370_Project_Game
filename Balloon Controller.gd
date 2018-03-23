@@ -25,6 +25,7 @@ var currentRect
 
 var targetVisible = false
 var time = 0.0
+var misses = 0
 
 func _ready():
 	windowSize = get_viewport().size
@@ -37,10 +38,8 @@ func _process(delta):
 func _input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == BUTTON_LEFT and event.pressed:
-			print("Click received...")
 			mouseClicked(event.position)
 	elif event is InputEventScreenTouch:
-		print("Touch received...")
 		screenTouched(event.position)
 
 
@@ -48,29 +47,31 @@ func _input(event):
 func mouseClicked(clickPosition):
 	var distance = clickPosition.distance_to(current.position)
 	
-	print("Distance: ", distance, " pixels")
-	print("Time: ", time, " seconds")
-	
 	var t = textScene.instance()
 	t.position = current.position
 	add_child(t)
 	
 	if currentRect.has_point( clickPosition ):
+		print("Distance: ", distance, " pixels")
+		print("Time: ", time, " seconds")
+		print("Misses: ", misses )
+		print(" ")
 		t.play("Hit!")
+		
 		var e = explosion.instance()
 		add_child(e)
 		e.position = current.position
 		e.scale = current.get_node("Balloon Sprite").scale * 2
 		e.play()
+		
+		targetVisible = false
+		time = 0.0
+		current.queue_free()
+		makeBalloon()
+		misses = 0
 	else:
 		t.play("Miss!")
-	
-	print(" ")
-	
-	targetVisible = false
-	time = 0.0
-	current.queue_free()
-	makeBalloon()
+		misses += 1
 
 func makeBalloon():
 	#Generate a new Balloon
