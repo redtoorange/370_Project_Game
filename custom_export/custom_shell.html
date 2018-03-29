@@ -394,15 +394,25 @@ $GODOT_HEAD_INCLUDE
 			});
 		})();
 	//]]>
+	function getID(){
+		var ID = 0;
+		
+		<?php
+			$i =  $_POST["ID"];
+			echo "ID = " . $i;
+		?>
+		
+		return ID;
+	}
 	
-	function uploadScore( n, t, d)
+	function uploadScore( i, n, t, d)
 	{
-		console.log("Attempting to upload scores: " + n + ", " + t + ", " + d);
+		console.log("Attempting to upload scores to ID" + i + ": " + n + ", " + t + ", " + d);
 		jQuery.ajax({
 			type: "POST",
 			url: 'db_connect/submitData.php',
 			dataType: 'json',
-			data: {number: n, time: t, distance: d },
+			data: {ID:i, number: n, time: t, distance: d },
 
 			success: function (obj, textstatus) {
 						  if( !('error' in obj) ) {

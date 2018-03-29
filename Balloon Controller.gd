@@ -2,6 +2,10 @@ extends Node2D
 
 export var numScenes = 4
 
+onready var global = get_node("/root/Global")
+
+export(NodePath) var scoreLabelPath
+var scoreLabel
 export(PackedScene) var redBalloon
 export(PackedScene) var blueBalloon
 export(PackedScene) var greenBalloon
@@ -27,24 +31,29 @@ var targetVisible = false
 var time = 0.0
 var misses = 0
 
+var balloonNumber = 1
+var playing = true
+
 func _ready():
 	windowSize = get_viewport().size
 	makeBalloon()
+	scoreLabel = get_node(scoreLabelPath)
+	scoreLabel.clearScore()
 
 func _process(delta):
 	if targetVisible:
 		time += delta
 
-func _input(event):
+func _unhandled_input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == BUTTON_LEFT and event.pressed:
 			mouseClicked(event.position)
 	elif event is InputEventScreenTouch:
 		screenTouched(event.position)
 
-
-
 func mouseClicked(clickPosition):
+	if !playing:
+		return
 	var distance = clickPosition.distance_to(current.position)
 	
 	var t = textScene.instance()
@@ -63,12 +72,20 @@ func mouseClicked(clickPosition):
 		e.position = current.position
 		e.scale = current.get_node("Balloon Sprite").scale * 2
 		e.play()
-		
-		targetVisible = false
-		time = 0.0
 		current.queue_free()
-		makeBalloon()
-		misses = 0
+		targetVisible = false
+		
+		scoreLabel.addScore(int(100 * (10/distance)))
+		
+		pushHitToDB(balloonNumber, time, distance)
+		
+		balloonNumber += 1
+		if balloonNumber > 5:
+			endGame()
+		else:
+			misses = 0
+			time = 0.0
+			makeBalloon()
 	else:
 		t.play("Miss!")
 		misses += 1
@@ -107,3 +124,17 @@ func makeBalloon():
 	pos.y -= size.y/2
 	currentRect = Rect2(pos, size)
 	targetVisible = true
+
+func pushHitToDB( num, time, dist):
+	global.pushToDB(num, time, dist)
+
+func endGame():
+	playing  = false
+	get_parent().get_node("RoundCompletePanel").show()
+
+func _on_PlayAgain_pressed():
+	balloonNumber = 1
+	playing  = true
+	scoreLabel.clearScore()
+	get_parent().get_node("RoundCompletePanel").hide()
+	makeBalloon()
