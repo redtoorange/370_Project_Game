@@ -230,9 +230,7 @@ $GODOT_HEAD_INCLUDE
 	</div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-	
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	
 	<script type="text/javascript" src="$GODOT_BASENAME.js"></script>
@@ -394,25 +392,64 @@ $GODOT_HEAD_INCLUDE
 			});
 		})();
 	//]]>
+	
+	var ready = false;
+	var currentID = -1;
+	
+	<?php
+		echo "var age   = '" . $_POST["ageSelect"]   . "';\n";
+		echo "var input = '" . $_POST["inputSelect"] . "';\n";
+		echo "var skill = '" . $_POST["skillSelect"] . "';\n";
+	?>
+	
 	function getID(){
-		var ID = 0;
-		
-		<?php
-			$i =  $_POST["ID"];
-			echo "ID = " . $i;
-		?>
-		
-		return ID;
+		return currentID;
 	}
 	
-	function uploadScore( i, n, t, d)
-	{
-		console.log("Attempting to upload scores to ID" + i + ": " + n + ", " + t + ", " + d);
+	function generateID(){
+		id = -1;
+		
 		jQuery.ajax({
 			type: "POST",
-			url: 'db_connect/submitData.php',
+			url: '../db_connect/getUserID.php',
 			dataType: 'json',
-			data: {ID:i, number: n, time: t, distance: d },
+			data: {ageSelect: age, inputSelect: input, skillSelect: skill },
+
+			success: 	function ( result ) {
+							currentID = result["ID"];
+							console.log("Finished Fetching ID");
+						}
+		});
+	}
+	
+	function uploadTargetHit( i, n, t, m, tars)
+	{
+		console.log("Uploading a target hit");
+		jQuery.ajax({
+			type: "POST",
+			url: '../db_connect/submitHit.php',
+			dataType: 'json',
+			data: {ID:i, number: n, time: t, misses: m, totalTargets: tars },
+
+			success: function (obj, textstatus) {
+						  if( !('error' in obj) ) {
+							console.log(obj.result);
+						  }
+						  else {
+							  console.log(obj.error);
+						  }
+					}
+		});
+	}
+	
+	function uploadScore( i, s )
+	{
+		console.log("Uploading Player Score");
+		jQuery.ajax({
+			type: "POST",
+			url: '../db_connect/submitScore.php',
+			dataType: 'json',
+			data: {ID:i, score: s },
 
 			success: function (obj, textstatus) {
 						  if( !('error' in obj) ) {
