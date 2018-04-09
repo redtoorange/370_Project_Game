@@ -11,7 +11,7 @@ onready var global = get_node("/root/Global")
 
 func _ready():
 	if !global.targetsParsed:
-		$HTTPRequest.request("http://73.171.122.38:8080/target_hunter/targetFile.json")
+		$HTTPRequest.request(global.address + "target_hunter/targetFile.json")
 	
 	$Panel.theme = global.currentTheme
 	$background.texture = global.currentBackground

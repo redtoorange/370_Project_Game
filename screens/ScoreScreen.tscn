@@ -310,7 +310,7 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Theme", "custom_fonts" ]
 
-[node name="Label" type="Label" parent="." index="3"]
+[node name="HighestScore" type="Label" parent="." index="3"]
 
 anchor_left = 0.0
 anchor_top = 1.0

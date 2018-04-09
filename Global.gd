@@ -1,5 +1,8 @@
 extends Node
 
+#var address = "http://73.171.122.38:8080/"
+var address = "http://localhost:8080/"
+
 var TargetData = preload("res://TargetData.gd")
 
 var themeLabel = "Carnival"
@@ -13,7 +16,7 @@ var targets = []
 var targetCount = 0
 var targetsParsed = false
 var thread = Thread.new()
-
+var highestScore = 0
 
 func _ready():
 	if OS.get_name() == "HTML5":
@@ -39,6 +42,7 @@ func uploadScore(score):
 		if id > -1:
 			print("uploadScore(", id, ",", score, ")")
 			JavaScript.eval(str("uploadScore(", id, ",", score, ")"))
+			checkHighestScore(score)
 
 func parseTargetData( text ):
 	var p = JSON.parse(text)
@@ -59,3 +63,6 @@ func getNewID():
 	if jsEnv:
 		id = -1
 		JavaScript.eval("generateID()")
+
+func checkHighestScore(score):
+	highestScore = max(score, highestScore)

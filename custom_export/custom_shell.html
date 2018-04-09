@@ -413,7 +413,7 @@ $GODOT_HEAD_INCLUDE
 			type: "POST",
 			url: '../db_connect/getUserID.php',
 			dataType: 'json',
-			data: {ageSelect: age, inputSelect: input, skillSelect: skill },
+			data: { whatToDo: "generateID", ageSelect: age, inputSelect: input, skillSelect: skill },
 
 			success: 	function ( result ) {
 							currentID = result["ID"];
@@ -427,9 +427,9 @@ $GODOT_HEAD_INCLUDE
 		console.log("Uploading a target hit");
 		jQuery.ajax({
 			type: "POST",
-			url: '../db_connect/submitHit.php',
+			url: '../db_connect/info.php',
 			dataType: 'json',
-			data: {ID:i, number: n, time: t, misses: m, totalTargets: tars },
+			data: {whatToDo: "uploadHit", ID:i, number: n, time: t, misses: m, totalTargets: tars },
 
 			success: function (obj, textstatus) {
 						  if( !('error' in obj) ) {
@@ -447,9 +447,9 @@ $GODOT_HEAD_INCLUDE
 		console.log("Uploading Player Score");
 		jQuery.ajax({
 			type: "POST",
-			url: '../db_connect/submitScore.php',
+			url: '../db_connect/info.php',
 			dataType: 'json',
-			data: {ID:i, score: s },
+			data: { whatToDo: "uploadScore", ID:i, score: s },
 
 			success: function (obj, textstatus) {
 						  if( !('error' in obj) ) {

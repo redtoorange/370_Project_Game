@@ -6,7 +6,8 @@ func _ready():
 	$"Score Panel".theme = global.currentTheme
 	$background.texture = global.currentBackground
 	
-	$HTTPRequest.request("http://73.171.122.38:8080/db_connect/highscores.php")
+	$HTTPRequest.request( global.address + "db_connect/getHighscores.php")
+	$HighestScore.text = str("Score: ", global.highestScore)
 
 func _on_Button_pressed():
 	get_tree().change_scene("res://screens/Start Screen.tscn")
