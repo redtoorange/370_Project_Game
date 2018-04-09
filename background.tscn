@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/carnivalBG.jpg" type="Texture" id=1]
+
+[node name="background" type="Sprite" index="0"]
+
+modulate = Color( 1, 1, 1, 0.839765 )
+scale = Vector2( 0.668752, 0.622045 )
+texture = ExtResource( 1 )
+centered = false
+_sections_unfolded = [ "Offset", "Transform", "Visibility" ]
+
+

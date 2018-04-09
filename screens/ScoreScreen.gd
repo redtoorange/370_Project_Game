@@ -1,11 +1,12 @@
 extends Control
 
-# class member variables go here, for example:
-# var a = 2
-# var b = "textvar"
+onready var global = get_node("/root/Global")
 
 func _ready():
-	$HTTPRequest.request("http://localhost:8080/db_connect/highscores.php")
+	$"Score Panel".theme = global.currentTheme
+	$background.texture = global.currentBackground
+	
+	$HTTPRequest.request("http://73.171.122.38:8080/db_connect/highscores.php")
 
 func _on_Button_pressed():
 	get_tree().change_scene("res://screens/Start Screen.tscn")

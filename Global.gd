@@ -2,12 +2,18 @@ extends Node
 
 var TargetData = preload("res://TargetData.gd")
 
+var themeLabel = "Carnival"
+
+var currentTheme = preload("res://CarnivalTheme.tres")
+var currentBackground = preload("res://assets/carnivalBG.jpg")
+
 var id = -1
 var jsEnv = false
 var targets = []
 var targetCount = 0
 var targetsParsed = false
 var thread = Thread.new()
+
 
 func _ready():
 	if OS.get_name() == "HTML5":

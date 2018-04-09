@@ -10,7 +10,7 @@ source_file="res://assets/button_rectangleRedClose.png"
 source_md5="60e49e421c31806fb373e4534754c108"
 
 dest_files=[ "res://.import/button_rectangleRedClose.png-841e0b0d75320baeeadd57a778d72ab8.stex" ]
-dest_md5="826618d6c04f6f75d07d5703dc894455"
+dest_md5="daee91f70e9b011cdfedb672e95711a8"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -28,5 +28,5 @@ process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0
