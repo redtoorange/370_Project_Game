@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/regularExplosion01.png-60f92c3925375efc54caff5d2c087fd3.stex"
+path="res://.import/crosshair-467259_640.png-a77abe609cff8b9c1268bacd3aaed94c.stex"
 
 [deps]
 
-source_file="res://balloons/assets/explosion/regularExplosion01.png"
-source_md5="3dd8419a4805fe8dbf2850b966ccbef9"
+source_file="res://assets/crosshair-467259_640.png"
+source_md5="90ffbb8c7736468e0cd1277a27ec8770"
 
-dest_files=[ "res://.import/regularExplosion01.png-60f92c3925375efc54caff5d2c087fd3.stex" ]
-dest_md5="b68ab0b54a214833314f96e0a5c76d0d"
+dest_files=[ "res://.import/crosshair-467259_640.png-a77abe609cff8b9c1268bacd3aaed94c.stex" ]
+dest_md5="2d0f5781eb039109689bf1c451f3aa99"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

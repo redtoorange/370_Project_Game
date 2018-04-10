@@ -1,13 +1,15 @@
 [gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://balloons/assets/explosion/regularExplosion01.png" type="Texture" id=1]
-[ext_resource path="res://balloons/assets/explosion/regularExplosion03.png" type="Texture" id=2]
-[ext_resource path="res://balloons/assets/explosion/regularExplosion04.png" type="Texture" id=3]
-[ext_resource path="res://balloons/assets/explosion/regularExplosion05.png" type="Texture" id=4]
-[ext_resource path="res://balloons/assets/explosion/regularExplosion06.png" type="Texture" id=5]
-[ext_resource path="res://balloons/assets/explosion/regularExplosion07.png" type="Texture" id=6]
-[ext_resource path="res://balloons/assets/explosion/regularExplosion08.png" type="Texture" id=7]
-[ext_resource path="res://balloons/Explosion2.gd" type="Script" id=8]
+[ext_resource path="res://assets/explosion/regularExplosion01.png" type="Texture" id=1]
+[ext_resource path="res://assets/explosion/regularExplosion03.png" type="Texture" id=2]
+[ext_resource path="res://assets/explosion/regularExplosion04.png" type="Texture" id=3]
+[ext_resource path="res://assets/explosion/regularExplosion05.png" type="Texture" id=4]
+[ext_resource path="res://assets/explosion/regularExplosion06.png" type="Texture" id=5]
+[ext_resource path="res://assets/explosion/regularExplosion07.png" type="Texture" id=6]
+[ext_resource path="res://assets/explosion/regularExplosion08.png" type="Texture" id=7]
+[ext_resource path="res://src/Explosion2.gd" type="Script" id=8]
+
+
 
 [sub_resource type="SpriteFrames" id=1]
 

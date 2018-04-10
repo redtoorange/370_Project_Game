@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/regularExplosion02.png-59ed15fa91960b4b4815a2b0a403428d.stex"
+path="res://.import/explosion 4.png-dcdee70f4b5a94b1aceeb398d9f0d2e7.stex"
 
 [deps]
 
-source_file="res://balloons/assets/explosion/regularExplosion02.png"
-source_md5="cbd3b1e253767dbf06f2db81e4ad2e72"
+source_file="res://assets/explosion/explosion 4.png"
+source_md5="e3d3a13ed59a8909e10e4fa4e20b77e9"
 
-dest_files=[ "res://.import/regularExplosion02.png-59ed15fa91960b4b4815a2b0a403428d.stex" ]
-dest_md5="691935f530f720aede6534580107342f"
+dest_files=[ "res://.import/explosion 4.png-dcdee70f4b5a94b1aceeb398d9f0d2e7.stex" ]
+dest_md5="c80aaf286c5d19b3ba1617023f89f11a"
 
 [params]
 
@@ -28,5 +28,5 @@ process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=false
+detect_3d=true
 svg/scale=1.0

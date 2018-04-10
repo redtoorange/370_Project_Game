@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/crosshair-467259_640.png-c6682d63a0406252b421bb74d6dcb70e.stex"
+path="res://.import/balloon_black.png-ed7382ff05442e03d4968c21533406d1.stex"
 
 [deps]
 
-source_file="res://balloons/assets/crosshair-467259_640.png"
-source_md5="90ffbb8c7736468e0cd1277a27ec8770"
+source_file="res://assets/balloon_black.png"
+source_md5="591699d3944cd3a7f809e4a041f0d154"
 
-dest_files=[ "res://.import/crosshair-467259_640.png-c6682d63a0406252b421bb74d6dcb70e.stex" ]
-dest_md5="2d0f5781eb039109689bf1c451f3aa99"
+dest_files=[ "res://.import/balloon_black.png-ed7382ff05442e03d4968c21533406d1.stex" ]
+dest_md5="22b6d5f8ffb18179c0483d1e3467a627"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

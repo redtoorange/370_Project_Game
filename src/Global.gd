@@ -1,13 +1,13 @@
 extends Node
 
-#var address = "http://73.171.122.38:8080/"
-var address = "http://localhost:8080/"
+var address = "http://73.171.122.38:8080/"
+#var address = "http://localhost:8080/"
 
-var TargetData = preload("res://TargetData.gd")
+var TargetData = preload("res://src/TargetData.gd")
 
 var themeLabel = "Carnival"
 
-var currentTheme = preload("res://CarnivalTheme.tres")
+var currentTheme = preload("res://themes/CarnivalTheme.tres")
 var currentBackground = preload("res://assets/carnivalBG.jpg")
 
 var id = -1

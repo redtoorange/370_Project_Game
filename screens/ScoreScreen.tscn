@@ -1,12 +1,16 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://screens/ScoreScreen.gd" type="Script" id=1]
-[ext_resource path="res://background.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Exit_Button.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/ScoreScreen.gd" type="Script" id=1]
+[ext_resource path="res://screens/background.tscn" type="PackedScene" id=2]
+[ext_resource path="res://screens/Exit_Button.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/cross.png" type="Texture" id=4]
-[ext_resource path="res://CarnivalTheme.tres" type="Theme" id=5]
+[ext_resource path="res://themes/CarnivalTheme.tres" type="Theme" id=5]
 [ext_resource path="res://fonts/Title.tres" type="DynamicFont" id=6]
 [ext_resource path="res://fonts/Normal.tres" type="DynamicFont" id=7]
+
+
+
+
 
 [node name="ScoreScreen" type="Control" index="0"]
 

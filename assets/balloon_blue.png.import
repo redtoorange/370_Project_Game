@@ -2,14 +2,14 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/balloon_blue.png-7837b6a6351e09a5a58da140ee9d888f.stex"
+path="res://.import/balloon_blue.png-0686312dc9cfa2a425901352dde43527.stex"
 
 [deps]
 
-source_file="res://balloons/assets/balloon_blue.png"
+source_file="res://assets/balloon_blue.png"
 source_md5="e34d7767a1d1c95d4780854b1ceac323"
 
-dest_files=[ "res://.import/balloon_blue.png-7837b6a6351e09a5a58da140ee9d888f.stex" ]
+dest_files=[ "res://.import/balloon_blue.png-0686312dc9cfa2a425901352dde43527.stex" ]
 dest_md5="792cc11d09503b35680d5cccbd45e1be"
 
 [params]

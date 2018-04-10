@@ -1,7 +1,9 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://balloons/assets/explosion/explosion 4.png" type="Texture" id=1]
-[ext_resource path="res://balloons/Explosion.gd" type="Script" id=2]
+[ext_resource path="res://assets/explosion/explosion 4.png" type="Texture" id=1]
+[ext_resource path="res://src/Explosion.gd" type="Script" id=2]
+
+
 
 [node name="Explosion" type="Sprite" index="0"]
 

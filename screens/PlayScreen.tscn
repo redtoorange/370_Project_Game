@@ -1,10 +1,10 @@
 [gd_scene load_steps=15 format=2]
 
-[ext_resource path="res://screens/PlayScreen.gd" type="Script" id=1]
-[ext_resource path="res://background.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Exit_Button.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/PlayScreen.gd" type="Script" id=1]
+[ext_resource path="res://screens/background.tscn" type="PackedScene" id=2]
+[ext_resource path="res://screens/Exit_Button.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/cross.png" type="Texture" id=4]
-[ext_resource path="res://Balloon Controller.gd" type="Script" id=5]
+[ext_resource path="res://src/Balloon Controller.gd" type="Script" id=5]
 [ext_resource path="res://balloons/Red_Balloon.tscn" type="PackedScene" id=6]
 [ext_resource path="res://balloons/Blue_Balloon.tscn" type="PackedScene" id=7]
 [ext_resource path="res://balloons/Green_Balloon.tscn" type="PackedScene" id=8]
@@ -12,8 +12,13 @@
 [ext_resource path="res://balloons/AnimatedText.tscn" type="PackedScene" id=10]
 [ext_resource path="res://balloons/Explosion2.tscn" type="PackedScene" id=11]
 [ext_resource path="res://fonts/Title.tres" type="DynamicFont" id=12]
-[ext_resource path="res://screens/ScoreLabel.gd" type="Script" id=13]
-[ext_resource path="res://CarnivalTheme.tres" type="Theme" id=14]
+[ext_resource path="res://src/ScoreLabel.gd" type="Script" id=13]
+[ext_resource path="res://themes/CarnivalTheme.tres" type="Theme" id=14]
+
+
+
+
+
 
 [node name="PlayScreen" type="Node"]
 

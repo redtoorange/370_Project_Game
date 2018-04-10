@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/regularExplosion08.png-ccde0df7f2b15c70de3a85efc586d3b7.stex"
+path="res://.import/regularExplosion06.png-da2ca8556a8a40e2144783b14cd048d9.stex"
 
 [deps]
 
-source_file="res://balloons/assets/explosion/regularExplosion08.png"
-source_md5="225037fa2b51e7b62d87659c962edcb3"
+source_file="res://assets/explosion/regularExplosion06.png"
+source_md5="3dbbab9af0c83f6ac367ebb43aa08ced"
 
-dest_files=[ "res://.import/regularExplosion08.png-ccde0df7f2b15c70de3a85efc586d3b7.stex" ]
-dest_md5="f0cb4235837af4ed8d929e5c3ee03851"
+dest_files=[ "res://.import/regularExplosion06.png-da2ca8556a8a40e2144783b14cd048d9.stex" ]
+dest_md5="1a49f1d76e3406c0ca08431ead4d8463"
 
 [params]
 
