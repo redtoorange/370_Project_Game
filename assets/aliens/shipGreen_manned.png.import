@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/balloon_blue.png-0686312dc9cfa2a425901352dde43527.stex"
+path="res://.import/shipGreen_manned.png-f8bc914c5c64ad3a1a29fd5f9f104981.stex"
 
 [deps]
 
-source_file="res://assets/balloon_blue.png"
-source_md5="e34d7767a1d1c95d4780854b1ceac323"
+source_file="res://assets/aliens/shipGreen_manned.png"
+source_md5="044afe021374e60d6de9eee0f455b88e"
 
-dest_files=[ "res://.import/balloon_blue.png-0686312dc9cfa2a425901352dde43527.stex" ]
-dest_md5="792cc11d09503b35680d5cccbd45e1be"
+dest_files=[ "res://.import/shipGreen_manned.png-f8bc914c5c64ad3a1a29fd5f9f104981.stex" ]
+dest_md5="08f462a72d96afc6d14ccccb5bb8beed"
 
 [params]
 

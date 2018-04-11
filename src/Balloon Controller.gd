@@ -79,7 +79,7 @@ func mouseClicked(clickPosition):
 		var e = explosion.instance()
 		add_child(e)
 		e.position = current.position
-		e.scale = current.get_node("Balloon Sprite").scale * 2
+		e.scale = current.get_node("TargetSprite").scale * 2
 		e.play()
 		current.queue_free()
 		targetVisible = false
@@ -117,7 +117,7 @@ func makeBalloon(spawnPos, sz):
 	current.position = spawnPos
 	add_child(current)
 	
-	var node = current.get_node("Balloon Sprite")
+	var node = current.get_node("TargetSprite")
 	#var s = rand_range(minScale, maxScale)
 	
 	var size = node.texture.get_size()

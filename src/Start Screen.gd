@@ -43,3 +43,7 @@ func _on_ChangeTheme_pressed():
 	
 	$background.texture = global.currentBackground
 	$Panel.theme = global.currentTheme
+
+
+func _on_Exit_pressed():
+	pass # replace with function body

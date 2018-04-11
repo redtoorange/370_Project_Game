@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://src/Start Screen.gd" type="Script" id=1]
 [ext_resource path="res://themes/CarnivalTheme.tres" type="Theme" id=2]
@@ -8,10 +8,9 @@
 [ext_resource path="res://screens/background.tscn" type="PackedScene" id=6]
 [ext_resource path="res://fonts/Title.tres" type="DynamicFont" id=7]
 [ext_resource path="res://fonts/Normal.tres" type="DynamicFont" id=8]
-[ext_resource path="res://src/Exit.gd" type="Script" id=9]
-[ext_resource path="res://src/DB_Controller.gd" type="Script" id=10]
+[ext_resource path="res://src/DB_Controller.gd" type="Script" id=9]
 
-[node name="Start Screen" type="Control" index="0"]
+[node name="Start Screen" type="Control"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -200,7 +199,6 @@ group = null
 text = "Quit"
 flat = false
 align = 1
-script = ExtResource( 9 )
 _sections_unfolded = [ "Visibility" ]
 
 [node name="DB_Controller" type="Panel" parent="." index="2"]
@@ -221,7 +219,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-script = ExtResource( 10 )
+script = ExtResource( 9 )
 
 [node name="Target_Text" type="TextEdit" parent="DB_Controller" index="0"]
 
@@ -489,7 +487,7 @@ max_redirects = 8
 
 [connection signal="pressed" from="Panel/VBoxContainer/ChangeTheme" to="." method="_on_ChangeTheme_pressed"]
 
-[connection signal="pressed" from="Panel/VBoxContainer/Exit" to="Panel/VBoxContainer/Exit" method="_on_Exit_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/Exit" to="." method="_on_Exit_pressed"]
 
 [connection signal="pressed" from="DB_Controller/upload" to="DB_Controller" method="_on_upload_pressed"]
 
