@@ -1,7 +1,7 @@
 extends Node
 
-#var address = "http://73.171.122.38:8080/"
-var address = "http://localhost:8080/"
+var address = "http://73.171.122.38:8080/"
+#var address = "http://localhost:8080/"
 
 var TargetData = preload("res://src/TargetData.gd")
 

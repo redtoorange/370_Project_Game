@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/space_explosion_3.wav-97b0d7716cdfc96241df1f5c8815fad4.sample"
+
+[deps]
+
+source_file="res://assets/sounds/space_explosion_3.wav"
+source_md5="ffb44b92a39c5f6429d000a7a03a959d"
+
+dest_files=[ "res://.import/space_explosion_3.wav-97b0d7716cdfc96241df1f5c8815fad4.sample" ]
+dest_md5="42737e3bcb4dd30ed3460857fb338a32"
+
+[params]
+
+force/8_bit=true
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

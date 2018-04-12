@@ -81,6 +81,10 @@ func mouseClicked(clickPosition):
 		e.position = current.position
 		e.scale = current.get_node("TargetSprite").scale * 2
 		e.play()
+		
+		#Spawn and play a new sound
+		get_parent().get_node("SoundController").playSound()
+		
 		current.queue_free()
 		targetVisible = false
 		

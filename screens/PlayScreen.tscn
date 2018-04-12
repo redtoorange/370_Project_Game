@@ -1,30 +1,29 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://src/PlayScreen.gd" type="Script" id=1]
 [ext_resource path="res://screens/background.tscn" type="PackedScene" id=2]
 [ext_resource path="res://screens/Exit_Button.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/cross.png" type="Texture" id=4]
 [ext_resource path="res://src/Balloon Controller.gd" type="Script" id=5]
-[ext_resource path="res://balloons/Target_V2.tscn" type="PackedScene" id=6]
-[ext_resource path="res://balloons/Target_V3.tscn" type="PackedScene" id=7]
-[ext_resource path="res://balloons/Target_V4.tscn" type="PackedScene" id=8]
-[ext_resource path="res://balloons/Target_V1.tscn" type="PackedScene" id=9]
-[ext_resource path="res://balloons/AnimatedText.tscn" type="PackedScene" id=10]
-[ext_resource path="res://balloons/Explosion2.tscn" type="PackedScene" id=11]
-[ext_resource path="res://fonts/Title.tres" type="DynamicFont" id=12]
-[ext_resource path="res://src/ScoreLabel.gd" type="Script" id=13]
-[ext_resource path="res://themes/CarnivalTheme.tres" type="Theme" id=14]
+[ext_resource path="res://targets/Target_V2.tscn" type="PackedScene" id=6]
+[ext_resource path="res://targets/Target_V3.tscn" type="PackedScene" id=7]
+[ext_resource path="res://targets/Target_V4.tscn" type="PackedScene" id=8]
+[ext_resource path="res://targets/Target_V1.tscn" type="PackedScene" id=9]
+[ext_resource path="res://targets/AnimatedText.tscn" type="PackedScene" id=10]
+[ext_resource path="res://targets/Explosion2.tscn" type="PackedScene" id=11]
+[ext_resource path="res://src/SoundController.gd" type="Script" id=12]
+[ext_resource path="res://targets/ExplosionSound.tscn" type="PackedScene" id=13]
+[ext_resource path="res://assets/sounds/space_explosion_1.wav" type="AudioStream" id=14]
+[ext_resource path="res://assets/sounds/space_explosion_2.wav" type="AudioStream" id=15]
+[ext_resource path="res://assets/sounds/space_explosion_3.wav" type="AudioStream" id=16]
+[ext_resource path="res://assets/sounds/carnival_explosion_1.wav" type="AudioStream" id=17]
+[ext_resource path="res://assets/sounds/carnival_explosion_2.wav" type="AudioStream" id=18]
+[ext_resource path="res://assets/sounds/carnival_explosion_3.wav" type="AudioStream" id=19]
+[ext_resource path="res://fonts/Title.tres" type="DynamicFont" id=20]
+[ext_resource path="res://src/ScoreLabel.gd" type="Script" id=21]
+[ext_resource path="res://themes/CarnivalTheme.tres" type="Theme" id=22]
 
-
-
-
-
-
-
-
-
-
-[node name="PlayScreen" type="Node"]
+[node name="PlayScreen" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
@@ -60,7 +59,19 @@ marginBottom = 200
 maxScale = 0.5
 minScale = 0.1
 
-[node name="ScoreLabel" type="Label" parent="." index="3"]
+[node name="SoundController" type="Node2D" parent="." index="3"]
+
+script = ExtResource( 12 )
+_sections_unfolded = [ "Transform" ]
+exposionScene = ExtResource( 13 )
+spaceExp1 = ExtResource( 14 )
+spaceExp2 = ExtResource( 15 )
+spaceExp3 = ExtResource( 16 )
+carnivalExp1 = ExtResource( 17 )
+carnivalExp2 = ExtResource( 18 )
+carnivalExp3 = ExtResource( 19 )
+
+[node name="ScoreLabel" type="Label" parent="." index="4"]
 
 anchor_left = 0.0
 anchor_top = 1.0
@@ -76,15 +87,15 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 12 )
+custom_fonts/font = ExtResource( 20 )
 text = "Score: 9999"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-script = ExtResource( 13 )
+script = ExtResource( 21 )
 _sections_unfolded = [ "custom_fonts" ]
 
-[node name="RoundCompletePanel" type="Panel" parent="." index="4"]
+[node name="RoundCompletePanel" type="Panel" parent="." index="5"]
 
 editor/display_folded = true
 visible = false
@@ -102,7 +113,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-theme = ExtResource( 14 )
+theme = ExtResource( 22 )
 _sections_unfolded = [ "Theme" ]
 __meta__ = {
 "_edit_group_": true
@@ -124,7 +135,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 12 )
+custom_fonts/font = ExtResource( 20 )
 text = "Round Complete!"
 align = 1
 percent_visible = 1.0
@@ -149,7 +160,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = ExtResource( 12 )
+custom_fonts/font = ExtResource( 20 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -176,7 +187,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = ExtResource( 12 )
+custom_fonts/font = ExtResource( 20 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null

@@ -1,10 +1,11 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://balloons/Target.gd" type="Script" id=1]
-[ext_resource path="res://assets/balloons/balloon_green.png" type="Texture" id=2]
-[ext_resource path="res://assets/aliens/shipGreen_manned.png" type="Texture" id=3]
+[ext_resource path="res://src/Target.gd" type="Script" id=1]
+[ext_resource path="res://assets/balloons/balloon_black.png" type="Texture" id=2]
+[ext_resource path="res://assets/aliens/shipYellow_manned.png" type="Texture" id=3]
 
-[node name="Target_V4" type="Node2D"]
+
+[node name="Target_V1" type="Node2D"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
