@@ -7,7 +7,8 @@
 [ext_resource path="res://assets/explosion/regularExplosion06.png" type="Texture" id=5]
 [ext_resource path="res://assets/explosion/regularExplosion07.png" type="Texture" id=6]
 [ext_resource path="res://assets/explosion/regularExplosion08.png" type="Texture" id=7]
-[ext_resource path="res://src/Explosion2.gd" type="Script" id=8]
+[ext_resource path="res://src/Explosion.gd" type="Script" id=8]
+
 
 [sub_resource type="SpriteFrames" id=1]
 

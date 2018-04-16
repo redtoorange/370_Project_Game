@@ -46,4 +46,5 @@ func _on_ChangeTheme_pressed():
 
 
 func _on_Exit_pressed():
-	pass # replace with function body
+	JavaScript.eval("exit()", true)
+	get_tree().quit()

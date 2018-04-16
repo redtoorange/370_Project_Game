@@ -1,6 +1,6 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://src/Start Screen.gd" type="Script" id=1]
+[ext_resource path="res://src/StartScreen.gd" type="Script" id=1]
 [ext_resource path="res://themes/CarnivalTheme.tres" type="Theme" id=2]
 [ext_resource path="res://themes/SpaceTheme.tres" type="Theme" id=3]
 [ext_resource path="res://assets/spaceBG.jpg" type="Texture" id=4]
@@ -8,9 +8,9 @@
 [ext_resource path="res://screens/background.tscn" type="PackedScene" id=6]
 [ext_resource path="res://fonts/Title.tres" type="DynamicFont" id=7]
 [ext_resource path="res://fonts/Normal.tres" type="DynamicFont" id=8]
-[ext_resource path="res://src/DB_Controller.gd" type="Script" id=9]
 
-[node name="Start Screen" type="Control"]
+
+[node name="Start Screen" type="Control" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -202,280 +202,7 @@ flat = false
 align = 1
 _sections_unfolded = [ "Visibility" ]
 
-[node name="DB_Controller" type="Panel" parent="." index="2"]
-
-editor/display_folded = true
-visible = false
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 21.0
-margin_top = 16.0
-margin_right = 225.0
-margin_bottom = 182.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-script = ExtResource( 9 )
-
-[node name="Target_Text" type="TextEdit" parent="DB_Controller" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 67.0
-margin_top = 39.0
-margin_right = 192.0
-margin_bottom = 64.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-text = "0"
-readonly = false
-highlight_current_line = false
-syntax_highlighting = false
-show_line_numbers = false
-highlight_all_occurrences = false
-override_selected_font_color = false
-context_menu_enabled = true
-smooth_scrolling = false
-v_scroll_speed = 80.0
-hiding_enabled = 0
-wrap_lines = false
-caret_block_mode = false
-caret_blink = false
-caret_blink_speed = 0.65
-caret_moving_by_right_click = true
-
-[node name="ID_Text" type="TextEdit" parent="DB_Controller" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 66.0
-margin_top = 6.0
-margin_right = 191.0
-margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-text = "0"
-readonly = false
-highlight_current_line = false
-syntax_highlighting = false
-show_line_numbers = false
-highlight_all_occurrences = false
-override_selected_font_color = false
-context_menu_enabled = true
-smooth_scrolling = false
-v_scroll_speed = 80.0
-hiding_enabled = 0
-wrap_lines = false
-caret_block_mode = false
-caret_blink = false
-caret_blink_speed = 0.65
-caret_moving_by_right_click = true
-
-[node name="Time_Text" type="TextEdit" parent="DB_Controller" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 67.0
-margin_top = 69.0
-margin_right = 192.0
-margin_bottom = 94.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-text = "0"
-readonly = false
-highlight_current_line = false
-syntax_highlighting = false
-show_line_numbers = false
-highlight_all_occurrences = false
-override_selected_font_color = false
-context_menu_enabled = true
-smooth_scrolling = false
-v_scroll_speed = 80.0
-hiding_enabled = 0
-wrap_lines = false
-caret_block_mode = false
-caret_blink = false
-caret_blink_speed = 0.65
-caret_moving_by_right_click = true
-
-[node name="Dist_Text" type="TextEdit" parent="DB_Controller" index="3"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 67.0
-margin_top = 99.0
-margin_right = 192.0
-margin_bottom = 124.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-text = "0"
-readonly = false
-highlight_current_line = false
-syntax_highlighting = false
-show_line_numbers = false
-highlight_all_occurrences = false
-override_selected_font_color = false
-context_menu_enabled = true
-smooth_scrolling = false
-v_scroll_speed = 80.0
-hiding_enabled = 0
-wrap_lines = false
-caret_block_mode = false
-caret_blink = false
-caret_blink_speed = 0.65
-caret_moving_by_right_click = true
-
-[node name="upload" type="Button" parent="DB_Controller" index="4"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 50.0
-margin_top = 134.0
-margin_right = 190.0
-margin_bottom = 154.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "Upload"
-flat = false
-align = 1
-
-[node name="Time_Label" type="Label" parent="DB_Controller" index="5"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 17.0
-margin_top = 75.0
-margin_right = 57.0
-margin_bottom = 89.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-text = "Time"
-align = 2
-valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="Target_Label" type="Label" parent="DB_Controller" index="6"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 18.0
-margin_top = 45.0
-margin_right = 58.0
-margin_bottom = 59.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-text = "Target"
-align = 2
-valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="ID_Label" type="Label" parent="DB_Controller" index="7"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 17.0
-margin_top = 16.0
-margin_right = 57.0
-margin_bottom = 30.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-text = "ID"
-align = 2
-valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="Dist_Label" type="Label" parent="DB_Controller" index="8"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 6.0
-margin_top = 105.0
-margin_right = 62.0
-margin_bottom = 119.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-text = "Distance"
-align = 2
-valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="HTTPRequest" type="HTTPRequest" parent="." index="3"]
+[node name="HTTPRequest" type="HTTPRequest" parent="." index="2"]
 
 download_file = ""
 use_threads = false
@@ -489,8 +216,6 @@ max_redirects = 8
 [connection signal="pressed" from="Panel/VBoxContainer/ChangeTheme" to="." method="_on_ChangeTheme_pressed"]
 
 [connection signal="pressed" from="Panel/VBoxContainer/Exit" to="." method="_on_Exit_pressed"]
-
-[connection signal="pressed" from="DB_Controller/upload" to="DB_Controller" method="_on_upload_pressed"]
 
 [connection signal="request_completed" from="HTTPRequest" to="." method="_on_HTTPRequest_request_completed"]
 

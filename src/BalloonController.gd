@@ -1,62 +1,60 @@
 extends Node2D
 
+onready var global = get_node("/root/Global")
+
+#Pixel Dist is the constant used by all screens to scale the targets
 export var PIXEL_DIST = 64
 export var numScenes = 4
 
-onready var global = get_node("/root/Global")
-
+#Score handler
 export(NodePath) var scoreLabelPath
 var scoreLabel
 
+#Scenes for the targets
 export(PackedScene) var redBalloon
 export(PackedScene) var blueBalloon
 export(PackedScene) var greenBalloon
 export(PackedScene) var blackBalloon
 
+#Scenes for the text and explosion
 export(PackedScene) var textScene
-
 export(PackedScene) var explosion
 
-export var marginLeft = 10
-export var marginRight = 10
-export var marginTop = 10
-export var marginBottom = 10
-
-export var maxScale = .5
-export var minScale = .1
-
+#data for the current target
 var current
 var windowSize
 var currentRect
+var focusPosition
 
+#data for the current round
 var targetVisible = false
 var time = 0.0
 var misses = 0
 
+#Track which target is displayed and when one is next
 var balloonNumber = 1
 var balloonID = -1
 var playing = true
 
-var focusPosition
+#Tracks which targets have already been hit
 var targetsAlreadyHit = []
 
+#Initialize the scene and begin the game
 func _ready():
 	global.getNewID()
-	
 	windowSize = get_viewport().size
-	
 	#Find the central location
 	focusPosition = windowSize / 2
-	
 	balloonID = generateTarget()
-	
 	scoreLabel = get_node(scoreLabelPath)
 	scoreLabel.clearScore()
 
+#Update the target timer
 func _process(delta):
 	if targetVisible:
 		time += delta
 
+#When the user clicks/taps, handle the input
 func _unhandled_input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == BUTTON_LEFT and event.pressed:
@@ -64,6 +62,7 @@ func _unhandled_input(event):
 	elif event is InputEventScreenTouch:
 		screenTouched(event.position)
 
+#Handle the click/touch event
 func mouseClicked(clickPosition):
 	if !playing:
 		return
@@ -73,6 +72,7 @@ func mouseClicked(clickPosition):
 	t.position = current.position
 	add_child(t)
 	
+	#Test to see if the click is inside the target's bounds
 	if currentRect.has_point( clickPosition ):
 		t.play("Hit!")
 		
@@ -99,14 +99,18 @@ func mouseClicked(clickPosition):
 			misses = 0
 			time = 0.0
 			balloonID = generateTarget()
+	
+	#The user clicked outside of the bounds, so it was a miss
 	else:
 		t.play("Miss!")
 		misses += 1
 
+#Create a new target for the user
 func makeBalloon(spawnPos, sz):
-	#Generate a new Balloon
+	#Generate random index
 	var i = randi() % numScenes
 	
+	#Select the new target
 	if i == 0:
 		current = redBalloon.instance()
 	elif i == 1:
@@ -121,17 +125,21 @@ func makeBalloon(spawnPos, sz):
 	current.position = spawnPos
 	add_child(current)
 	
+	#Get a reference to the target
 	var node = current.get_node("TargetSprite")
-	#var s = rand_range(minScale, maxScale)
 	
+	#Scale the target
 	var size = node.texture.get_size()
 	node.scale.x = sz.x / size.x
 	node.scale.y = sz.y / size.y
 	
+	#Move the target into position
 	focusPosition = current.position
 	var pos = current.position
 	pos.x -= sz.x/2
 	pos.y -= sz.y/2
+
+	#Create a rect for the target's bounds checking
 	currentRect = Rect2(pos, sz)
 	targetVisible = true
 
@@ -169,6 +177,7 @@ func _on_PlayAgain_pressed():
 	playing  = true
 
 
+#Generate a new valid target
 func generateTarget():
 	var valid = false
 	var targetNum
@@ -203,9 +212,11 @@ func generateTarget():
 	
 	global.targets[targetNum].printData()
 	targetsAlreadyHit.append(targetNum)
+
 	return targetNum
 
 
+#Convert the plain text from the target into a vector direction
 func directionToVector( dir ):
 	if dir == "NE":
 		return Vector2(1, -1)

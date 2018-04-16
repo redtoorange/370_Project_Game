@@ -4,13 +4,13 @@
 [ext_resource path="res://screens/background.tscn" type="PackedScene" id=2]
 [ext_resource path="res://screens/Exit_Button.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/cross.png" type="Texture" id=4]
-[ext_resource path="res://src/Balloon Controller.gd" type="Script" id=5]
+[ext_resource path="res://src/BalloonController.gd" type="Script" id=5]
 [ext_resource path="res://targets/Target_V2.tscn" type="PackedScene" id=6]
 [ext_resource path="res://targets/Target_V3.tscn" type="PackedScene" id=7]
 [ext_resource path="res://targets/Target_V4.tscn" type="PackedScene" id=8]
 [ext_resource path="res://targets/Target_V1.tscn" type="PackedScene" id=9]
 [ext_resource path="res://targets/AnimatedText.tscn" type="PackedScene" id=10]
-[ext_resource path="res://targets/Explosion2.tscn" type="PackedScene" id=11]
+[ext_resource path="res://targets/Explosion.tscn" type="PackedScene" id=11]
 [ext_resource path="res://src/SoundController.gd" type="Script" id=12]
 [ext_resource path="res://targets/ExplosionSound.tscn" type="PackedScene" id=13]
 [ext_resource path="res://assets/sounds/space_explosion_1.wav" type="AudioStream" id=14]
@@ -22,6 +22,8 @@
 [ext_resource path="res://fonts/Title.tres" type="DynamicFont" id=20]
 [ext_resource path="res://src/ScoreLabel.gd" type="Script" id=21]
 [ext_resource path="res://themes/CarnivalTheme.tres" type="Theme" id=22]
+
+
 
 [node name="PlayScreen" type="Node" index="0"]
 
