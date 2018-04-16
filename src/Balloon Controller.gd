@@ -135,31 +135,38 @@ func makeBalloon(spawnPos, sz):
 	currentRect = Rect2(pos, sz)
 	targetVisible = true
 
+#Send target data and score to the DB
 func uploadTargetHit( num, time, miss, total):
 	global.uploadTargetHit(num, time, miss, total)
+	global.uploadScore( scoreLabel.currentScore )
 
+#The player has hit the required number of targets, end the round
 func endGame():
 	playing  = false
 	get_parent().get_node("RoundCompletePanel").show()
 	global.uploadScore( scoreLabel.currentScore )
 
+
+#Start a new round for the player
 func _on_PlayAgain_pressed():
+	#Generate a new row in the DB
 	global.getNewID()
 	
-	#create a new row in the database
-	scoreLabel.clearScore()
+	#hide the modal
 	get_parent().get_node("RoundCompletePanel").hide()
+
+	#reset the round variables
 	balloonNumber = 1
 	targetsAlreadyHit = []
 	focusPosition = windowSize / 2
 	targetVisible = false
-	
+	scoreLabel.clearScore()
 	misses = 0
 	time = 0.0
+
+	#Create a new balloon and display it
 	balloonID = generateTarget()
 	playing  = true
-
-
 
 
 func generateTarget():

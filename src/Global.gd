@@ -1,7 +1,7 @@
 extends Node
 
-var address = "http://73.171.122.38:8080/"
-#var address = "http://localhost:8080/"
+#var address = "http://73.171.122.38:8080/"
+var address = "http://localhost:8080/"
 
 var TargetData = preload("res://src/TargetData.gd")
 
@@ -18,12 +18,18 @@ var targetsParsed = false
 var thread = Thread.new()
 var highestScore = 0
 
+var input
+var age
+var skill
+
 func _ready():
 	if OS.get_name() == "HTML5":
 		jsEnv = true
 		
 		#Send call to make a new ID
-		#getNewID()
+		input = JavaScript.eval("input")
+		age = JavaScript.eval("age")
+		skill = JavaScript.eval("skill")
 
 func uploadTargetHit(number, time, miss, total):
 	if jsEnv && number != null && time != null && miss != null && total != null:
