@@ -1,7 +1,7 @@
 extends Node
 
-#var address = "http://73.171.122.38:8080/"
-var address = "http://localhost:8080/"
+var address = "http://73.171.122.38:8080/"
+#var address = "http://localhost:8080/"
 
 var TargetData = preload("res://src/TargetData.gd")
 
@@ -16,7 +16,6 @@ var jsEnv = false
 var targets = []
 var targetCount = 0
 var targetsParsed = false
-var thread = Thread.new()
 var highestScore = 0
 
 var input
@@ -84,7 +83,8 @@ func parseTargets( result ):
 func getNewID():
 	if jsEnv:
 		id = -1
-		JavaScript.eval("generateID()")
+		var q = str("generateID(\"", themeLabel, "\")")
+		JavaScript.eval(q)
 
 func checkHighestScore(score):
 	highestScore = max(score, highestScore)
