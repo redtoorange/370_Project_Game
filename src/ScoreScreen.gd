@@ -41,4 +41,4 @@ func applyFilter():
 		$HTTPRequest.request( global.address + s )
 	else:
 		filter = false
-		$HTTPRequest.request( global.address + "db_connect/getHighscores.php?skill=&age=&input=")
+		$HTTPRequest.request( global.address + "db_connect/getHighscores.php?skill=&age=&input=")3121

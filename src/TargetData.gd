@@ -9,7 +9,7 @@ func _init( i, dir, dis, sz):
 	direction = dir
 	distance = dis
 	size = sz
-	#print("New target created: ", i, " ", dir, " ", dis, " ", sz)
 
+#Debug function to print the target's data that was read from the file
 func printData():
 	print("Target: ", index, " ", direction, " ", distance, " ", size)

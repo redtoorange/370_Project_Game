@@ -9,7 +9,6 @@
 [ext_resource path="res://fonts/Title.tres" type="DynamicFont" id=7]
 [ext_resource path="res://fonts/Normal.tres" type="DynamicFont" id=8]
 
-
 [node name="Start Screen" type="Control" index="0"]
 
 anchor_left = 0.0
