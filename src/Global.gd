@@ -44,6 +44,8 @@ func _ready():
 		elif themeLabel == "Space":
 			currentTheme = preload("res://themes/SpaceTheme.tres")
 			currentBackground = preload("res://assets/spaceBG.jpg")
+	else:
+		availableThemes = "Both"
 
 
 func uploadTargetHit(number, time, miss, total):
@@ -69,7 +71,6 @@ func parseTargetData( text ):
 	var p = JSON.parse(text)
 	
 	var targetRaw = p.get_result()
-	#file.close()
 	
 	targetCount = targetRaw.size()
 	for i in range(0, targetRaw.size()):

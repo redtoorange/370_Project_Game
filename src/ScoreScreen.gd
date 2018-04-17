@@ -21,7 +21,6 @@ func _on_HTTPRequest_request_completed(result, response_code, headers, body):
 func clearScores():
 	for i in range(1, 11):
 		var n = get_node(str("Score Panel/VBoxContainer/Score_", i))
-		print(i)
 		n.text = ""
 
 func parseScores(text):
@@ -36,9 +35,11 @@ func parseScores(text):
 
 func applyFilter():
 	if !filter:
+		$"Score Panel/FilterButton".text = "View All Scores"
 		filter = true
 		var s = str("db_connect/getHighscores.php?skill=", global.skill, "&age=", global.age, "&input=", global.input)
 		$HTTPRequest.request( global.address + s )
 	else:
+		$"Score Panel/FilterButton".text = "View Group Scores"
 		filter = false
-		$HTTPRequest.request( global.address + "db_connect/getHighscores.php?skill=&age=&input=")3121
+		$HTTPRequest.request( global.address + "db_connect/getHighscores.php?skill=&age=&input=")
