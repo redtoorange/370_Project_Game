@@ -213,7 +213,7 @@ func generateTarget():
 		var size = float(global.targets[targetNum].size)
 		var distance = int(global.targets[targetNum].distance)
 		
-		var pos = focusPosition + (direction * (distance-1) * PIXEL_DIST)
+		var pos = focusPosition + (direction * (distance-1) * (PIXEL_DIST - 10))
 		var rectSize = size * Vector2(PIXEL_DIST, PIXEL_DIST)
 		
 		var testRect = Rect2(pos, rectSize)

@@ -4,12 +4,14 @@
 #	By: 	Andrew McGuiness, Ryan Kelley, Andrew Albanese, Michael Hall
 #	All rights are reserved by the above entities.
 #
-#	Purpose:
+#	Purpose: The global script is loaded before the engine actually fully loads.  It
+#	can be accessed from all scripts and acts as a singleton.  This script is used to
+#	handle all Database connections and it manages all data/state that must last outside
+#	of a single scene.
 
 extends Node
 
 # Where to look for the target data at
-#var address = "http://73.171.122.38:8080/"
 var address = "http://localhost:8080/"
 
 # Target Class file
@@ -57,6 +59,7 @@ func _ready():
 		input = JavaScript.eval("input")
 		age = JavaScript.eval("age")
 		skill = JavaScript.eval("skill")
+		address = JavaScript.eval("server")
 
 		# Pull the available theme from PHP into JS and then into the game
 		availableThemes = JavaScript.eval("theme")

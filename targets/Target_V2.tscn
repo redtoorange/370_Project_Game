@@ -4,8 +4,6 @@
 [ext_resource path="res://assets/balloons/balloon_red.png" type="Texture" id=2]
 [ext_resource path="res://assets/aliens/shipBeige_manned.png" type="Texture" id=3]
 
-
-
 [node name="Target_V2" type="Node2D"]
 
 script = ExtResource( 1 )
@@ -17,6 +15,6 @@ spaceTex = ExtResource( 3 )
 
 scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 2 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Animation", "Offset", "Transform" ]
 
 
