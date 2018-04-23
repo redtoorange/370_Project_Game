@@ -1,3 +1,15 @@
+#	Code Produced as part of a project for Dr. Joe Chase
+#	Radford University: ITEC370
+#	Date: 	April 22nd, 2018
+#	By: 	Andrew McGuiness, Ryan Kelley, Andrew Albanese, Michael Hall
+#	All rights are reserved by the above entities.
+#
+#	Purpose: The Start Screen is the Main Menu of the game.  It is the first
+#	thing that is displayed to the user.  This script is designed to handle the
+#	click events for all of the buttons on the Main Menu.  This script also 
+#	initializes the theme assets and loads them into memory.  The start script
+#	will also download and begin parsing the target file.
+
 extends Control
 
 onready var global = get_node("/root/Global")

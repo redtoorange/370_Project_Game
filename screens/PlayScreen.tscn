@@ -23,8 +23,6 @@
 [ext_resource path="res://src/ScoreLabel.gd" type="Script" id=21]
 [ext_resource path="res://themes/CarnivalTheme.tres" type="Theme" id=22]
 
-
-
 [node name="PlayScreen" type="Node" index="0"]
 
 script = ExtResource( 1 )
@@ -54,12 +52,6 @@ greenBalloon = ExtResource( 8 )
 blackBalloon = ExtResource( 9 )
 textScene = ExtResource( 10 )
 explosion = ExtResource( 11 )
-marginLeft = 200
-marginRight = 200
-marginTop = 200
-marginBottom = 200
-maxScale = 0.5
-minScale = 0.1
 
 [node name="SoundController" type="Node2D" parent="." index="3"]
 
@@ -99,7 +91,6 @@ _sections_unfolded = [ "custom_fonts" ]
 
 [node name="RoundCompletePanel" type="Panel" parent="." index="5"]
 
-editor/display_folded = true
 visible = false
 anchor_left = 0.5
 anchor_top = 0.5
@@ -203,6 +194,6 @@ _sections_unfolded = [ "Visibility" ]
 
 [connection signal="pressed" from="RoundCompletePanel/PlayAgain" to="Balloon Controller" method="_on_PlayAgain_pressed"]
 
-[connection signal="pressed" from="RoundCompletePanel/Quit" to="." method="_on_Quit_pressed"]
+[connection signal="pressed" from="RoundCompletePanel/Quit" to="." method="_on_Button_pressed"]
 
 
