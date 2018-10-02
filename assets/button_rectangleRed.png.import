@@ -7,10 +7,7 @@ path="res://.import/button_rectangleRed.png-fe8e0ee16775cc41fa27694b24ddd49f.ste
 [deps]
 
 source_file="res://assets/button_rectangleRed.png"
-source_md5="0ecd855892afc6f72dea20a8f9480a3c"
-
 dest_files=[ "res://.import/button_rectangleRed.png-fe8e0ee16775cc41fa27694b24ddd49f.stex" ]
-dest_md5="d0d77a05a23c9b921cf2f406a2f23987"
 
 [params]
 

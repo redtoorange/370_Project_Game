@@ -7,10 +7,7 @@ path="res://.import/carnival_explosion_3.wav-f616a965de766690489f4c6da3ae46db.sa
 [deps]
 
 source_file="res://assets/sounds/carnival_explosion_3.wav"
-source_md5="879defdacd50fd467f8bac91a4b2550a"
-
 dest_files=[ "res://.import/carnival_explosion_3.wav-f616a965de766690489f4c6da3ae46db.sample" ]
-dest_md5="0360d159c3a6e9429e66686bd9151918"
 
 [params]
 

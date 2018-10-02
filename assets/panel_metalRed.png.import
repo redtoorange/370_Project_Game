@@ -7,10 +7,7 @@ path="res://.import/panel_metalRed.png-01a6f02bbea1009547c83a5c06e2d657.stex"
 [deps]
 
 source_file="res://assets/panel_metalRed.png"
-source_md5="72bd91b0bea6bc234d9dd5b54d080810"
-
 dest_files=[ "res://.import/panel_metalRed.png-01a6f02bbea1009547c83a5c06e2d657.stex" ]
-dest_md5="a01eedaee885aadc3ec095a98852bc44"
 
 [params]
 

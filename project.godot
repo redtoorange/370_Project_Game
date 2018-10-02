@@ -10,7 +10,7 @@ config_version=3
 
 [application]
 
-config/name="Target_Hunt"
+config/name="TargetHunt"
 run/main_scene="res://screens/Start Screen.tscn"
 config/icon="res://icon.png"
 

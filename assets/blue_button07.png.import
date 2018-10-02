@@ -7,10 +7,7 @@ path="res://.import/blue_button07.png-a6000b2133f19e72db4bdff201a3a064.stex"
 [deps]
 
 source_file="res://assets/blue_button07.png"
-source_md5="c5ac9ffc08055cdbb731e6bfb0d2593a"
-
 dest_files=[ "res://.import/blue_button07.png-a6000b2133f19e72db4bdff201a3a064.stex" ]
-dest_md5="bfe31c95fb2d742b9d463c15653d4d29"
 
 [params]
 

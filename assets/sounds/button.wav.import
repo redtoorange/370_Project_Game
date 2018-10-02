@@ -7,10 +7,7 @@ path="res://.import/button.wav-a94ed58b7666db5c5eee5c1ca10263a0.sample"
 [deps]
 
 source_file="res://assets/sounds/button.wav"
-source_md5="02625144500d23484358ff8eca080f36"
-
 dest_files=[ "res://.import/button.wav-a94ed58b7666db5c5eee5c1ca10263a0.sample" ]
-dest_md5="25719739eec04fe2288b6e4f7d459ae1"
 
 [params]
 

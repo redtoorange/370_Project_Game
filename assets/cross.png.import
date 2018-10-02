@@ -7,10 +7,7 @@ path="res://.import/cross.png-02546c5657ca18f075c4c5271ba2b0d0.stex"
 [deps]
 
 source_file="res://assets/cross.png"
-source_md5="0f5fd1e36374acd9da6687b4929fa265"
-
 dest_files=[ "res://.import/cross.png-02546c5657ca18f075c4c5271ba2b0d0.stex" ]
-dest_md5="0f0fc6a8ec72d5f9a93af793a4ac7322"
 
 [params]
 

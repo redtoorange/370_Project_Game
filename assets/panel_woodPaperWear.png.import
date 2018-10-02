@@ -7,10 +7,7 @@ path="res://.import/panel_woodPaperWear.png-ee3c9df5e50dd17c5a49a149106ca45b.ste
 [deps]
 
 source_file="res://assets/panel_woodPaperWear.png"
-source_md5="00af8760ebc19ab4d233fb82c483cb93"
-
 dest_files=[ "res://.import/panel_woodPaperWear.png-ee3c9df5e50dd17c5a49a149106ca45b.stex" ]
-dest_md5="9cc73f569a12f9223cdb7c3dc6632481"
 
 [params]
 

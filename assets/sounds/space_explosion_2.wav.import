@@ -7,10 +7,7 @@ path="res://.import/space_explosion_2.wav-44cf4a7bf0545f368773e027a3b61354.sampl
 [deps]
 
 source_file="res://assets/sounds/space_explosion_2.wav"
-source_md5="b2943f7621d9171e2e536c25cb80c3ff"
-
 dest_files=[ "res://.import/space_explosion_2.wav-44cf4a7bf0545f368773e027a3b61354.sample" ]
-dest_md5="84aaed32fca43cdb10e66854366e5205"
 
 [params]
 

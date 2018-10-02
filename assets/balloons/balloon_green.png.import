@@ -7,10 +7,7 @@ path="res://.import/balloon_green.png-21d0a87676bf0a160db355497c5153be.stex"
 [deps]
 
 source_file="res://assets/balloons/balloon_green.png"
-source_md5="1b00061dfb335a035f7c733f1045bb88"
-
 dest_files=[ "res://.import/balloon_green.png-21d0a87676bf0a160db355497c5153be.stex" ]
-dest_md5="ad0c50e86c80143c3dad1b2687858caf"
 
 [params]
 

@@ -7,10 +7,7 @@ path="res://.import/carnivalBG.jpg-815059ca5d78bdc80af6d5065665808e.stex"
 [deps]
 
 source_file="res://assets/carnivalBG.jpg"
-source_md5="a53add1dd4f13155e87ba2d87c5678b6"
-
 dest_files=[ "res://.import/carnivalBG.jpg-815059ca5d78bdc80af6d5065665808e.stex" ]
-dest_md5="51bd9004c7f2912e1d92870e1b976459"
 
 [params]
 

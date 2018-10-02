@@ -7,10 +7,7 @@ path="res://.import/button_rectangleMetalClose.png-8cfa032a6fbe43a8785988306a0df
 [deps]
 
 source_file="res://assets/button_rectangleMetalClose.png"
-source_md5="3d1690b6acf023ff639e0e5d3e86a50c"
-
 dest_files=[ "res://.import/button_rectangleMetalClose.png-8cfa032a6fbe43a8785988306a0df149.stex" ]
-dest_md5="3a0b7b1aca2f5f03b458c4c7c0465345"
 
 [params]
 

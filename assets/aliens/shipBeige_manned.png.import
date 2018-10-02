@@ -7,10 +7,7 @@ path="res://.import/shipBeige_manned.png-770bd3c4572265466c03da6d075b296f.stex"
 [deps]
 
 source_file="res://assets/aliens/shipBeige_manned.png"
-source_md5="ce40e6c7fba10a04773e92d78eeb4dc0"
-
 dest_files=[ "res://.import/shipBeige_manned.png-770bd3c4572265466c03da6d075b296f.stex" ]
-dest_md5="465538774b1da62aea63f10920d4db44"
 
 [params]
 
